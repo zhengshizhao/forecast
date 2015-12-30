@@ -1,7 +1,10 @@
 
-//var http = require('http');
-var ziptoloc = require("./ziptoloc");
-//var zipcode  = "10024";
+//Import private module ziptoloc.  
+var  forecast = require("./zipToloc");
+
+//Read ziocode from command line you input. 
 var zipcode = process.argv.slice(2);
-zipcode.forEach(ziptoloc.getforecast);
-//console.log(process);
+
+//For each zipcode, print forecast information to console.  
+zipcode.forEach(forecast.getforecast);
+
